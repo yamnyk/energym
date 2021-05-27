@@ -140,6 +140,7 @@
   width: 70px;
   padding: 19px;
   font-family: #{'Russo One'};
+  font-weight: 400;
   background-color: clr(pink);
 
   @include pseudo(before, url(../../../assets/img/msg-dialog.svg), static) {
