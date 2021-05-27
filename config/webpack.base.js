@@ -57,6 +57,17 @@ export default {
   },
   module: {
     rules: [
+      // HTML
+      {
+        test: /\.(html)$/,
+        include: path.resolve('src/**/*.html'),
+        use: {
+          loader: 'html-loader',
+          options: {
+            interpolate: true
+          }
+        }
+      },
       {
         // JavaScript
         test: /\.js$/,
@@ -108,7 +119,7 @@ export default {
           },
           {
             loader: "sass-loader",
-            options: { sourceMap: true },
+            options: {sourceMap: true},
           },
         ],
       },
@@ -157,6 +168,7 @@ export default {
           template: `${PAGES_DIR}/${page}`,
           chunks: [page.split(".")[0]],
           filename: `./${page}`,
+          minify: false
         })
     ),
   ],
