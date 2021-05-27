@@ -3,39 +3,68 @@
 @import 'fonts';
 @import "reset";
 
-.section-title {
-  &__h1 {
-    @include text(48px);
+.section {
+  &-title {
+    &__h1 {
+      @include text(48px);
+    }
+
+    &__h2 {
+      @include text(32px);
+    }
+
+    &__h3 {
+      @include text(25px);
+    }
+
+    &__h4 {
+      @include text(20px);
+    }
+
+    &__h5 {
+      @include text(16px);
+    }
   }
 
-  &__h2 {
-    @include text(32px);
+  &-text {
+    &__h1 {
+      @include text(18px, 400, "Montserrat");
+    }
+
+    &__h2 {
+      @include text(16px, 400, "Montserrat");
+    }
+
+    &__h3 {
+      @include text(14px, 400, "Montserrat");
+    }
   }
 
-  &__h3 {
-    @include text(25px);
-  }
+  &-highlight {
+    @extend .section-title__h1;
+    width: max-content;
+    padding: 40px;
+    background-color: clr(purple);
+    color: clr(white);
 
-  &__h4 {
-    @include text(20px);
-  }
+    &--inversed {
+        background-color: clr(purple30);
+      display: flex;
+      flex-direction: column;
 
-  &__h5 {
-    @include text(16px);
-  }
-}
+      & > .section-highlight__title {
+        color: transparent;
+        -webkit-text-stroke: 2px clr(white);
+        @include text(72px);
+      }
 
-.section-text {
-  &__h1 {
-    @include text(18px, 400, "Montserrat");
-  }
+      & > .section-highlight__subtitle {
+        -webkit-text-stroke: initial;
+        color: clr(white);
+        @include text(36px, 600, $secondaryFont);
+      }
+    }
 
-  &__h2 {
-    @include text(16px, 400, "Montserrat");
-  }
-
-  &__h3 {
-    @include text(14px, 400, "Montserrat");
   }
 }
 
@@ -140,6 +169,7 @@
   width: 70px;
   padding: 19px;
   font-family: #{'Russo One'};
+  font-weight: 400;
   background-color: clr(pink);
 
   @include pseudo(before, url(../../../assets/img/msg-dialog.svg), static) {
@@ -187,15 +217,19 @@
   &--cross {
     background-image: url("../../../assets/img/cross.svg");
   }
+
   &--left {
     background-image: url("../../../assets/img/arrow-left.svg");
   }
+
   &--right {
     background-image: url("../../../assets/img/arrow-right.svg");
   }
+
   &--up {
     background-image: url("../../../assets/img/arrow-up.svg");
   }
+
   &--down {
     background-image: url("../../../assets/img/arrow-down.svg");
   }
