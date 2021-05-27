@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<%= require('html-loader!./templates/_header.html').default %>
 <%= require('html-loader!./templates/_gogi.html').default %>
 <button class="primary-btn">ЗАМОВИТИ КАРТУ</button>
 <a class="primary-btn">ЗАМОВИТИ КАРТУ</a>
@@ -28,6 +29,17 @@
   <button class="square-btn square-btn--up"></button>
   <button class="square-btn square-btn--down"></button>
   <button class="square-btn square-btn--down square-btn--bigger"></button>
+</div>
+
+<div>
+  <p class="section-highlight section-title__h1">Кодекс ENERGYM</p>
+  <p class="section-highlight section-highlight--inversed">Години занять та активності</p>
+  <p class="section-highlight section-highlight--inversed">
+    <span class="section-highlight__title">#DANCEDANCE</span>
+    <span class="section-highlight__subtitle">
+      Most energy area in dance-class
+    </span>
+  </p>
 </div>
 
 <h1 class="section-title__h1">title</h1>
