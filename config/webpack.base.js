@@ -15,6 +15,7 @@ const PATHS = {
   pages: {
     index: [`${path.resolve("./src")}/pages/index.js`],
     about: [`${path.resolve("./src")}/pages/about.js`],
+    header: [`${path.resolve("./src")}/pages/header.js`],
   },
 }
 

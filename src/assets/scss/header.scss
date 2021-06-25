@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+a,
+h2,
+h3, 
+button,
+input,
+label,
+p {
+    text-decoration: none !important;
+}
+
+.header {
+  margin: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  &__header-container {
+    display: flex;
+
+    &-item {
+      padding-right: 19px;
+      display: flex;
+    }
+    &-item:nth-child(3) {
+      padding-right: 27px;
+    }
+    &-item:nth-child(4) {
+      padding-right: 0px;
+    }
+    
+  }
+  &__ukr-page {
+    color: clr(pink);
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 15px;
+    padding-right: 6px;
+  }
+  &__ukr-page::after {
+    content: '';
+    margin-left: 3px;
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: clr(purple);
+  }
+  &__rus-page {
+    color: clr(black);
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 15px;
+  }
+}
+.menu {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top:100px;
+    width: 290px;
+    background-color:#333333;
+    z-index: 2;
+
+    &.menu--active{
+        display: block;
+
+        // @include mq(tb, true){
+        //     display: flex;
+        // }
+    }
+
+    &__menu-item{
+        height: 87px;
+        border-bottom: 3px solid #3B3B3B;
+        position: relative;
+
+
+            // @include mq(tb, true){
+            //     display: none;
+            // }
+        }
+
+    }
+ 
+    .burger-menu_button {
+        position: fixed;
+        top: 23px;
+        right: 15px;
+        z-index: 30;
+        transition: 0.4s;
+      }
+            
+      .burger-menu_lines::before,
+      .burger-menu_lines::after,
+      .burger-menu_lines {
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background-color: clr(purple);
+        transition: 0.4s;
+      }
+      .burger-menu_lines {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .burger-menu_lines::before {
+        content: '';
+        top: -3px;
+      }
+      .burger-menu_lines::after {
+        content: '';
+        top: 3px;
+      }
+      
+      
+      .burger-menu_active .burger-menu_lines {
+        background-color: transparent;
+      }
+      .burger-menu_active .burger-menu_lines::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+      .burger-menu_active .burger-menu_lines::after{
+        top: 0;
+        transform: rotate(-45deg);
+      }
