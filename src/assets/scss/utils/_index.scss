@@ -173,7 +173,7 @@
   background-color: clr(pink);
 
   @include pseudo(before, url(../../../assets/img/msg-dialog.svg), static) {
-    height: 32px;
+    // height: 32px;
     margin-right: 20px;
     transition: margin-right 0.3s;
   }
@@ -189,6 +189,16 @@
       margin-right: 12px;
     }
   }
+   @include mq(tb) {
+      width: 32px;
+      height:  32px;
+      padding: 0;
+        &::before {
+          content:url(../../../assets/img/msg-dialog-mobile.svg);
+          margin-left: calc((100% - 14px) / 2);
+        }
+    }
+
 }
 
 .square-btn {
@@ -209,21 +219,32 @@
     background-color: clr(red);
   }
 
-  &--bigger {
-    width: 90px;
-    height: 90px;
-  }
-
-  &--cross {
-    background-image: url("../../../assets/img/cross.svg");
-  }
-
-  &--left {
-    background-image: url("../../../assets/img/arrow-left.svg");
-  }
-
-  &--right {
-    background-image: url("../../../assets/img/arrow-right.svg");
+   @include mq(tb) {
+     width: 40px;
+     height: 40px;
+   }
+   
+   &--bigger {
+     width: 90px;
+     height: 90px;
+    }
+    
+    &--cross {
+      background-image: url("../../../assets/img/cross.svg");
+      @include mq(tb) {
+        background-image: url("../../../assets/img/cross-mobile.svg");
+      }
+    }
+    
+    &--left {
+      background-image: url("../../../assets/img/arrow-left.svg");
+    }
+    
+    &--right {
+      background-image: url("../../../assets/img/arrow-right.svg");
+      @include mq(tb) {
+        background-image: url("../../../assets/img/arrow-right-mobile.svg");
+      }
   }
 
   &--up {

@@ -1,4 +1,4 @@
-@mixin mq($screen, $min) {
+@mixin mq($screen, $min: false) {
   @if ($min) {
     @media (min-width: map-get($resolutions, $screen)) {
       @content

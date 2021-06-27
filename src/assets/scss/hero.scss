@@ -10,7 +10,7 @@
 .hero {
     padding: 50px 60px 40px;
     position: relative;
-    @media (min-width: 1000px) {
+    @include mq(tbLG, true) {
         padding: 350px 330px 100px;
     }
     &__info {
@@ -22,11 +22,14 @@
             justify-self: center;
             transform: translateY(50%);
             transition: all .5s ease-in-out;
-            @media (max-width: 768px) {
+
+            @include mq(tb) {
                 max-width: 190px;
+
             }
-            @media (min-width: 1000px) {
+            @include mq(tbLG, true) {
                 transform: translateY(30%);
+
             }
         }
         &-link {
@@ -36,9 +39,10 @@
             color: clr(white);
             font-family: $primaryFont;
             transition: all .5s ease-in-out;
-            @media (min-width: 1000px) {
+            @include mq(tbLG, true) {
                 font-size: rem(48);
                 line-height: rem(58);
+
             }
         }
         &-link:nth-child(2) {
@@ -69,10 +73,10 @@
         position: absolute;
         right: rem(16);
         bottom: rem(16);
-        @media screen and (max-width: 768px) {
+        @include mq(tb) {
             display: none;
+
         }
-        
     }
     &__contact-mobile {
         @extend .more-btn;
@@ -86,14 +90,16 @@
         position: absolute;
         right: rem(8);
         bottom: rem(8);
+
         @include pseudo(before, url(../../../assets/img/msg-dialog-mobile.svg), static) {
         }
         
         @include pseudo(after, none);
-       
-            @media screen and (min-width: 768px) {
-                display: none;
-            }
+
+        @include mq(tb, true) {
+            display: none;
+        }
+           
     }
     &__arrow {
         background-color: clr(purple30);
@@ -102,21 +108,20 @@
         bottom: rem(16);
         transform: translateX(-50%);
         transition: all .5s ease-in-out;
-        @media screen and (max-width: 768px) {
+        @include mq(tb) {
             width: 32px;
             height: 32px;
             bottom: rem(8);
             background-image: url("../../assets/img/arrow-down-mobile.svg");
         }
-        
     }
 }
 
 .hero__info-title.active {
     transform: translateY(0);
-    @media (min-width: 1000px) {
+    @include mq(tbLG, true) {
         transform: translateY(-70%);
-            }
+    }
 }
 
 .hero__info-link.active {
@@ -129,7 +134,6 @@
 }
 
 
-
 .info {
     @include flex();
     column-gap: 1.1em;
@@ -137,26 +141,30 @@
     padding: 27px 0 34px;
     text-align: center;
     background-color: #FAF7FB;
-    @media (min-width: 1000px) {
+
+    @include mq(tbLG, true) {
         padding-top: 115px;
         padding-bottom: 115px;
         column-gap: 90px;
+
     }
+
     &__bgi {
         position: absolute;
         top: 1em;
         left: 0;
-        @media (min-width: 1000px) {
+        @include mq(tbLG, true) {
             top: 4em;
         }
     }
+
     &__content {
         &-title,
         &-subtitle {
             font-size: rem(13);
             color: clr(black);
             font-family: $primaryFont;
-            @media (min-width: 1000px) {
+            @include mq(tbLG, true) {
                 font-size: rem(48);
                 margin-bottom: 8px;
             }
@@ -164,7 +172,7 @@
         &-subtitle {
             font-size: rem(9);
             line-height: rem(11);
-            @media (min-width: 1000px) {
+            @include mq(tbLG, true) {
                 font-size: rem(20);
                 line-height: rem(24);
                 max-width: 174px;
