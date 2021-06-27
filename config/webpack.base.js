@@ -15,6 +15,7 @@ const PATHS = {
   pages: {
     index: [`${path.resolve("./src")}/pages/index.js`],
     about: [`${path.resolve("./src")}/pages/about.js`],
+    hero: [`${path.resolve("./src")}/pages/hero.js`],
   },
 }
 
@@ -32,6 +33,7 @@ export default {
   entry: {
     index: PATHS.pages.index,
     about: PATHS.pages.about,
+    hero: PATHS.pages.hero,
     // module: `${PATHS.src}/your-module.js`,
   },
   output: {

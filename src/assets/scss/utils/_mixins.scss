@@ -1,4 +1,4 @@
-@mixin mq($screen, $min) {
+@mixin mq($screen, $min: false) {
   @if ($min) {
     @media (min-width: map-get($resolutions, $screen)) {
       @content
@@ -33,7 +33,7 @@
 }
 
 // Simple usage FLEXBOX
-@mixin flex($vertical: center, $horizontal: center) {
+@mixin flex($horizontal: center, $vertical: center) {
   display: flex;
   justify-content: $horizontal;
   align-items: $vertical;
