@@ -33,6 +33,12 @@
                 </svg>
         </div>
         <div class = "header__header-container">
+            <!-- <div class = "header__header-container-item">
+            <select class="header__pages">
+                <option><span class="header__ukr-page">УК</span></option>
+                <option><span class="header__rus-page">РУС</span></option>
+            </select>
+            </div> -->
             <div class = "header__header-container-item">
                 <a href=""><span class="header__ukr-page">УК</span></a>
                 <a href=""><span class="header__rus-page">РУС</span></a>
@@ -50,20 +56,26 @@
                 </svg>
             </div>
             <div class = "header__header-container-item">
-                <a href="" class="burger-menu_button">
-                        <span class="burger-menu_lines"></span>
-                </a>
+                <div class="burger-menu">
+                    <a href="" class="burger-menu__button">
+                            <span class="burger-menu__lines"></span>
+                    </a>
+                </div>
             </div>
             <menu class="menu">
-                <ul class="menu__menu-tabs">
-                    <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Клубні картки</a></li>
-                    <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Послуги</a></li>
-                    <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Тренерський склад</a></li>
-                    <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Для дітей</a></li>
-                    <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Розклад</a></li>
-                    <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Контакти</a></li>
-                </ul>
-                <ul>
+                <div class="header__menu-title">
+                    <p class="menu__title"><a class="menu__link-title" href="#">Меню</a></p>
+                    <button class="square-btn square-btn--cross"></button>
+                </div>
+                    <ul class="menu__menu-tabs">
+                        <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Клубні картки</a></li>
+                        <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Послуги</a></li>
+                        <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Тренерський склад</a></li>
+                        <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Для дітей</a></li>
+                        <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Розклад</a></li>
+                        <li class="menu__menu-tab"><a class="menu__menu-tab-link" href="#">Контакти</a></li>
+                    </ul>
+                <ul class="menu__menu-items">
                     <li class="menu__menu-item">
                         <li><a class="menu__menu-item-link" href="#">Special one</a></li>
                         <li><a class="menu__menu-item-link" href="#">Life Style</a></li>
