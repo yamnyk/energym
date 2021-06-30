@@ -11,9 +11,10 @@ label,
 p {
     text-decoration: none !important;
 }
-
-.header {
+header {
   margin: 16px;
+}
+.header {
   display: flex;
   justify-content: space-between;
 
@@ -26,6 +27,10 @@ p {
     }
     &-item:nth-child(3) {
       padding-right: 27px;
+
+      @include mq(tbLG, true){
+        padding-right: 0px;
+      }
     }
     &-item:nth-child(4) {
       padding-right: 0px;
@@ -69,6 +74,10 @@ p {
 }
 
     .burger-menu {
+
+      @include mq(tbLG, true){
+        display: none;
+      }
 
       &__button{
         position: sticky;
@@ -121,6 +130,10 @@ p {
       width: 40px;
       height: 40px;
       background-color: clr(purple50);
+
+      @include mq(tbLG, true){
+        display: none;
+      }
     }
 
       .menu {
@@ -133,31 +146,76 @@ p {
         background-color:clr(white);
         color: clr(purpleDark);
 
+            @include mq(tb, true){
+              width: 316px;
+            }
+
+            @include mq(tbLG, true){
+              display: flex;
+              position: static;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              z-index: 0;
+              left: 0;
+              top: 0;
+              // margin-top: 104px;
+            }
+
+
         &__link-title {
           color: clr(purple);
           @include text(24px, 400, $primaryFont);
           line-height: 29px;
           padding-left: 24px;
+
+          @include mq(tbLG, true){
+            display: none;
+          }
         }
 
         &__menu-tabs{
           margin: 24px;
+
+          @include mq(tbLG, true){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 58px 0px 31px;
+          }
         }
     
         &.menu--active{
             display: block;
-    
-            // @include mq(tb, true){
-            //     display: flex;
-            // }
         }
+
         &__menu-tab-link, &__menu-item-link {
           @include text(15px, 500, $secondaryFont);
           line-height: 18px;
+
+          @include mq(tb, true){
+            display: flex;
+            justify-content: space-between;
+
+            &::after{
+              content: url("../img/arrow-right.svg");
+              width: 21px;
+              height: 14px;
+
+              @include mq(tbLG, true){
+                display: none;
+              }
+            }
+          }
         }
 
         &__menu-tab {
           padding-bottom: 20px;
+
+          @include mq(tbLG, true){
+            padding-bottom: 0px;
+          }
           
         }
     

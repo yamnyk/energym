@@ -30,3 +30,20 @@ tabs.addEventListener('click', function (event) {
 }});
 
 // menu.addEventListener("click", toggleMenu);
+
+
+
+// const obj = {
+//     cards: ['gold', 'medium'],
+// }
+
+
+// document.querySelector('.menu-link').addEventListener('click', (e) => {
+//          e.target.textContent
+//         for( let [key, value] of Object.entries(obj)) {
+//             if(key === e.target.id) {
+//                 value forEach map
+//             }
+//         }
+//         })
+// })
