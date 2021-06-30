@@ -1,4 +1,4 @@
-const tabsTitle = document.querySelectorAll('.menu__menu-tab');
+const tabsTitle = document.querySelectorAll('.menu__menu-tab-link');
 const tabsContent = document.querySelectorAll('.menu__menu-item');
 const tabs = document.querySelector('.menu__menu-tabs');
 const menu = document.querySelector(".menu");
@@ -21,11 +21,12 @@ tabs.addEventListener('click', function (event) {
     let target = event.target;
         for (let i = 0; i < tabsTitle.length; i++) {
            if (target === tabsTitle[i]) {
-               tabsTitle[i].classList.add('active');
-               tabsContent[i].classList.add('tabs-par-show');
+               tabsTitle[i].classList.add('menu__menu-tab-link--active');
+
+               tabsContent[i].classList.add('menu__menu-item--active');
             } else {
-                tabsTitle[i].classList.remove('active');
-                tabsContent[i].classList.remove('tabs-par-show');
+                tabsTitle[i].classList.remove('menu__menu-tab-link--active');
+                tabsContent[i].classList.remove('menu__menu-item--active');
             }
 }});
 

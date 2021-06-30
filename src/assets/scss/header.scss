@@ -11,10 +11,20 @@ label,
 p {
     text-decoration: none !important;
 }
+
 header {
-  margin: 16px;
+  margin: 16px auto;
+  max-width: 1440px;
+}
+.logo svg{
+
+  @include mq(tbLG, true){
+    width: 118px;
+    height: 24px;
+  }
 }
 .header {
+  margin: 0 16px;
   display: flex;
   justify-content: space-between;
 
@@ -24,6 +34,17 @@ header {
     &-item {
       padding-right: 19px;
       display: flex;
+      
+      & svg{
+        @include mq(tbLG, true){
+          width: 19px;
+          height: 19px;
+        }
+      }
+
+      @include mq(tbLG, true){
+        padding-right: 42px;
+      }
     }
     &-item:nth-child(3) {
       padding-right: 27px;
@@ -184,6 +205,7 @@ header {
     }
 
       .menu {
+        margin: 0 16px;
         display: none;
         position: absolute;
         z-index: 10;
@@ -202,7 +224,7 @@ header {
               position: static;
               justify-content: center;
               align-items: center;
-              width: 100%;
+              width: 97%;
               z-index: 0;
               left: 0;
               top: 0;
@@ -222,7 +244,6 @@ header {
         }
 
         &__menu-tabs{
-          margin: 24px;
 
           @include mq(tbLG, true){
             display: flex;
@@ -255,10 +276,25 @@ header {
               }
             }
           }
+
+          @include mq(tbLG, true){
+            padding-bottom: 24px;
+          }
+
+        }
+
+        &__menu-tab-link{
+          
+          &--active {
+            border-bottom: 1px solid clr(red);
+            transition: 2s;
+          }
+
         }
 
         &__menu-tab {
           padding-bottom: 20px;
+
 
           @include mq(tbLG, true){
             padding-bottom: 0px;
@@ -269,5 +305,9 @@ header {
         &__menu-items{
             display: none;
             }
+
+        &__menu-item--active {
+          display: block;
+        }
     
         }
