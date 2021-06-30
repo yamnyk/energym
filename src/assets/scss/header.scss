@@ -72,6 +72,53 @@ header {
     align-items: center;
   }
 }
+.location {
+  display: none;
+  margin-left: 14px;
+  border-radius: 4px;
+  border: none;
+  width: 200px;
+  height: 24px;
+  background: clr(secondaryBG);
+  @include text(16px, 400, $secondaryFont);
+  line-height: 20px;
+  color: #7A7979;
+  padding-left: 16px;
+  outline: none;
+
+  &:active {
+    outline: none;
+  }
+  
+  @include mq(tbLG, true){
+    display: block;
+  }
+}
+
+.search {
+  display: none;
+  margin-left: 12px;
+  border-radius: 4px;
+  border: none;
+  width: 200px;
+  height: 24px;
+  background: clr(secondaryBG);
+
+  &:active {
+    outline: none;
+  }
+
+  &::placeholder{
+    @include text(16px, 400, $secondaryFont);
+    line-height: 20px;
+    color: #7A7979;
+    padding-left: 16px;
+  }
+  
+  @include mq(tbLG, true){
+    display: block;
+  }
+}
 
     .burger-menu {
 
