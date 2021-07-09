@@ -230,7 +230,7 @@ header {
             }
 
 
-        &__link-title {
+        &__title {
           color: clr(purple);
           @include text(24px, 400, $primaryFont);
           line-height: 29px;
@@ -240,7 +240,7 @@ header {
           }
         }
 
-        &__menu-tabs{
+        &__tabs{
 
           @include mq(tbLG, true){
             display: flex;
@@ -255,7 +255,7 @@ header {
             display: block;
         }
 
-        &__menu-tab-link, &__menu-item-link {
+        &__tab-link, &__item-link {
           @include text(15px, 500, $secondaryFont);
           line-height: 18px;
 
@@ -280,7 +280,7 @@ header {
 
         }
 
-        &__menu-tab-link{
+        &__tab-link{
 
           &--active {
             border-bottom: 1px solid clr(red);
@@ -288,7 +288,7 @@ header {
 
         }
 
-        &__menu-tab {
+        &__tab {
           padding-bottom: 20px;
 
 
@@ -298,14 +298,14 @@ header {
           
         }
     
-        &__menu-item-link {
+        &__item-link {
           @include mq(tbLG, true){
             @include text(14px, 400, $primaryFont);
             line-height: 17px;
             padding-bottom: 15px;
           }
         }
-        &__menu-item-item-link {
+        &__sub-item-link {
           @include mq(tbLG, true){
             @include text(14px, 400, $secondaryFont);
             line-height: 17px;
@@ -314,13 +314,13 @@ header {
             
           }
         }
-        &__menu-item{
+        &__item{
             display: none;
          }
 
-        &__menu-item--active {
+        &__item--active {
           display: grid;
-          grid-template-columns: repeat(auto-fill,minmax(240px, 1fr));
+          grid-template-columns: repeat(auto-fill,minmax(20%, 1fr));
           row-gap: 32px;
         }
         &__contact {
